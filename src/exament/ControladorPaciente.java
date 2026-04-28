@@ -17,6 +17,19 @@ public class ControladorPaciente {
     public void agregarPaciente(Paciente p) {
         listaPacientes.add(p);
     }
+    public void listarPacientes() {
+        if (listaPacientes.isEmpty()) {
+            System.out.println("No hay pacientes registrados.");
+        } else {
+            for (Paciente p : listaPacientes) {
+                System.out.println("-------------------");
+                System.out.println("Nombre: " + p.getPrimer_nombre());
+                System.out.println("Documento: " + p.getNumero_documento());
+                System.out.println("Email: " + p.getEmail());
+                System.out.println("Tipo sangre: " + p.getTipo_sangre());
+            }
+        }
+    }
 
    
 }
