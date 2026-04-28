@@ -59,6 +59,4 @@ public class Paciente {
     public String getTipo_sangre() {
         return tipo_sangre;
     }
-
-    
 }

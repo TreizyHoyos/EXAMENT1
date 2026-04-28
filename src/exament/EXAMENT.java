@@ -61,7 +61,8 @@ public class EXAMENT {
                                 fecha, email, telefono,
                                 alergias, tipoSangre
                         );
-if (!p.validarIdentidad()) {
+                        
+                        if (!p.validarIdentidad()) {
                             throw new Exception("Datos inválidos.");
                         }
 
