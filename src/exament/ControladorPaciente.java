@@ -4,10 +4,19 @@
  */
 package exament;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author treiz
  */
 public class ControladorPaciente {
     
+    private ArrayList<Paciente> listaPacientes = new ArrayList<>();
+
+    public void agregarPaciente(Paciente p) {
+        listaPacientes.add(p);
+    }
+
+   
 }
