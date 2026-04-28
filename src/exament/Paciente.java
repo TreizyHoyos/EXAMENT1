@@ -33,4 +33,32 @@ public class Paciente {
         this.tipo_sangre = tipo_sangre;
     }
     
+    public boolean validarIdentidad() {
+        return numero_documento > 0 && email.contains("@");
+    }
+
+    public String emitirAlertasMedicas() {
+        if (!alergias.isEmpty()) {
+            return "Alergias registradas: " + alergias;
+        }
+        return "No presenta alergias";
+    }
+
+    public String getPrimer_nombre() {
+        return primer_nombre;
+    }
+
+    public int getNumero_documento() {
+        return numero_documento;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getTipo_sangre() {
+        return tipo_sangre;
+    }
+
+    
 }
