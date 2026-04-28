@@ -61,9 +61,33 @@ public class EXAMENT {
                                 fecha, email, telefono,
                                 alergias, tipoSangre
                         );
+if (!p.validarIdentidad()) {
+                            throw new Exception("Datos inválidos.");
+                        }
 
-        
-        
+                        controlador.agregarPaciente(p);
+                        System.out.println("Paciente agregado correctamente.");
+                        System.out.println(p.emitirAlertasMedicas());
+                        break;
+
+                    case 2:
+                        controlador.listarPacientes();
+                        break;
+
+                    case 3:
+                        System.out.println("Programa finalizado.");
+                        break;
+
+                    default:
+                        System.out.println("Opcion inválida.");
+                }
+
+            } catch(Exception e) {
+                System.out.println("Error: " + e.getMessage());
+                opcion = 0;
+            }
+
+        } while(opcion != 3);
     }
-    
 }
+        
